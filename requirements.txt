@@ -100,7 +100,6 @@ mathparse==0.1.2
 matplotlib
 mccabe==0.6.1
 mistune==0.8.4
-mkl-fft==1.1.0
 mkl-random==1.1.1
 mkl-service==2.3.0
 mock==4.0.2
