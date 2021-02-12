@@ -51,7 +51,6 @@ Flask==1.1.2
 fsspec==0.7.4
 future==0.18.2
 gast==0.3.3
-gevent @ file:///C:/ci/gevent_1593005471151/work
 glob2==0.7
 gmpy2==2.0.8
 google-auth==1.21.1
@@ -63,39 +62,39 @@ gunicorn==20.0.4
 h5py==2.10.0
 HeapDict==1.0.1
 helpdev==0.7.1
-html5lib @ file:///tmp/build/80754af9/html5lib_1593446221756/work
-idna @ file:///tmp/build/80754af9/idna_1593446292537/work
-imageio @ file:///tmp/build/80754af9/imageio_1594161405741/work
+html5lib
+idna
+imageio
 imagesize==1.2.0
-importlib-metadata @ file:///C:/ci/importlib-metadata_1593446511143/work
-intervaltree @ file:///tmp/build/80754af9/intervaltree_1594361675072/work
-ipykernel @ file:///C:/ci/ipykernel_1594745408489/work/dist/ipykernel-5.3.2-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1593447482397/work
+importlib-metadata
+intervaltree
+ipykernel
+ipython
 ipython-genutils==0.2.0
 ipywidgets==7.5.1
 isort==4.3.21
 itsdangerous==1.1.0
 jdcal==1.4.1
-jedi @ file:///C:/ci/jedi_1592833825077/work
+jedi
 Jinja2==2.11.2
-joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
+joblib
 json5==0.9.5
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
+jupyter-client
 jupyter-console==6.1.0
 jupyter-core==4.6.3
 jupyterlab==2.1.5
-jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1594164409481/work
+jupyterlab-server
 Keras==2.1.5
 Keras-Preprocessing==1.1.2
-keyring @ file:///C:/ci/keyring_1593109799227/work
+keyring
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 libarchive-c==2.9
 llvmlite==0.33.0+1.g022ab0f
 locket==0.2.0
-lxml @ file:///C:/ci/lxml_1594822774489/work
+lxml
 Markdown==3.2.2
 MarkupSafe==1.1.1
 mathparse==0.1.2
