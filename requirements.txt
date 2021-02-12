@@ -31,7 +31,6 @@ cffi==1.14.0
 chardet==3.0.4
 click==7.1.2
 cloudpickle
-clyent==1.2.2
 colorama==0.4.3
 comtypes==1.1.7
 conda==4.8.3
@@ -42,16 +41,12 @@ contextlib2==0.6.0.post1
 cryptography==2.9.2
 cycler==0.10.0
 cymem==2.0.3
-Cython @ file:///C:/ci/cython_1594829190914/work
 cytoolz==0.10.1
-dask @ file:///tmp/build/80754af9/dask-core_1594156306305/work
 decorator==4.4.2
 defusedxml==0.6.0
-diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distlib==0.3.1
-distributed @ file:///C:/ci/distributed_1594742844291/work
 docutils==0.16
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+en-core-web-sm
 entrypoints==0.3
 et-xmlfile==1.0.1
 fastcache==1.1.0
