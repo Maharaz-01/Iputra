@@ -1,0 +1,68 @@
+{% include "header.html" %}
+	</br>
+
+		<div align="center">
+		<div align="center" class="container">
+			<div class="header">
+				<h2 class="word">iPutra Notifications</h2>
+				<h3>Application Type:
+					{% if type == "new": %}
+					NEW STUDENT
+					{% elif type == "depend": %}
+					DEPENDENTS
+					{% else: %}
+					RENEWAL
+					{% endif %}
+				</h3>
+			</div></br>
+			<table class="table" border="1">
+  <thead>
+    <tr>
+        <th>Application ID</th>
+		<th>Matric</th>
+        <th>Type</th>
+        <th>Status</th>
+		<th>Remark</th>
+
+    </tr>
+    </thead>
+    <tbody>
+     {% for row in data %}
+            <tr>
+
+				{% if(row[2] == 'new'): %}
+				<td>NS-{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+					<td>NEW STUDENT</td>
+				{% elif(row[2] == 'depend'): %}
+				<td>DP-{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+					<td>DEPENDANT</td>
+				{% else: %}
+				<td>RN-{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+				<td>RENEWAL</td>
+				{% endif %}
+                {% if(row[3] == 'Approved'): %}
+					<td style="color: green; font-size: 25px;">ACCEPTED</td>
+				{% elif(row[3] == 'Declined'): %}
+					<td style="color: red; font-size: 25px;">DECLINED</td>
+				{% else: %}
+				<td>PENDING</td>
+				{% endif %}
+				<td>{{row[4]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br><br>
+            <h4 style="text-align: left;">If your application is declined, kindly view the remarks and submit a
+                new application with corrected information</h4>
+		</div>
+		</div>
+<div>{% include "chaticon.html" %}</div>
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

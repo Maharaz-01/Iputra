@@ -1,0 +1,269 @@
+
+<!--<html>-->
+<!--	<head>-->
+<!--		<meta charset="UTF-8">-->
+<!--		<title> Login </title>-->
+<!--		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+<!--		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--		<style>-->
+<!--			body{-->
+<!--				/*background-image: url("{{ url_for('static', filename='bg.jpeg') }}");*/-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			header{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--			nav{-->
+<!--				text-align: center;-->
+<!--			}-->
+<!--			nav button{-->
+<!--				background-color: #ff2e2e;-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			nav button:hover{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			.active{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			input{-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			.container{-->
+<!--				background-color: rgb(255,255,255,0.5);-->
+<!--				padding: 10px;-->
+<!--				width: 60%;-->
+<!--			}-->
+<!--			footer{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--			/* The Modal (background) */-->
+<!--.modal {-->
+<!--  display: none; /* Hidden by default */-->
+<!--  position: fixed; /* Stay in place */-->
+<!--  z-index: 1; /* Sit on top */-->
+<!--  padding-top: 100px; /* Location of the box */-->
+<!--  left: 0;-->
+<!--  top: 0;-->
+<!--  width: 100%; /* Full width */-->
+<!--  height: 100%; /* Full height */-->
+<!--  overflow: auto; /* Enable scroll if needed */-->
+<!--  background-color: rgb(0,0,0); /* Fallback color */-->
+<!--  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */-->
+<!--}-->
+
+<!--/* Modal Content */-->
+<!--.modal-content {-->
+<!--  position: relative;-->
+<!--  background-color: #fefefe;-->
+<!--  margin: auto;-->
+<!--  padding: 0;-->
+<!--  border: 1px solid #888;-->
+<!--  width: 40%;-->
+<!--  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);-->
+<!--  -webkit-animation-name: animatetop;-->
+<!--  -webkit-animation-duration: 0.4s;-->
+<!--  animation-name: animatetop;-->
+<!--  animation-duration: 0.4s;-->
+<!--}-->
+
+<!--/* Add Animation */-->
+<!--@-webkit-keyframes animatetop {-->
+<!--  from {top:-300px; opacity:0}-->
+<!--  to {top:0; opacity:1}-->
+<!--}-->
+
+<!--@keyframes animatetop {-->
+<!--  from {top:-300px; opacity:0}-->
+<!--  to {top:0; opacity:1}-->
+<!--}-->
+
+<!--/* The Close Button */-->
+<!--.close {-->
+<!--  color: white;-->
+<!--  float: right;-->
+<!--  font-size: 28px;-->
+<!--  font-weight: bold;-->
+<!--}-->
+
+<!--.close:hover,-->
+<!--.close:focus {-->
+<!--  color: #000;-->
+<!--  text-decoration: none;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--/* The Close Button */-->
+<!--.close2 {-->
+<!--  color: white;-->
+<!--  float: right;-->
+<!--  font-size: 28px;-->
+<!--  font-weight: bold;-->
+<!--}-->
+
+<!--.close2:hover,-->
+<!--.close2:focus {-->
+<!--  color: #000;-->
+<!--  text-decoration: none;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--.modal-header {-->
+<!--  padding: 2px 16px;-->
+<!--  background-color: #ff2e2e;-->
+<!--  color: white;-->
+<!--}-->
+
+<!--.modal-body {padding: 2px 16px;}-->
+
+<!--.modal-footer {-->
+<!--  padding: 2px 16px;-->
+<!--  background-color: #5cb85c;-->
+<!--  color: white;-->
+<!--}-->
+<!--*{padding:0;margin:0;}-->
+
+<!--.float{-->
+<!--	position:fixed;-->
+<!--	width:80px;-->
+<!--	height:80px;-->
+<!--	bottom:100px;-->
+<!--	right:10px;-->
+<!--	text-align:center;-->
+<!--}-->
+
+<!--.my-float{-->
+<!--	margin-top:22px;-->
+<!--}-->
+
+
+<!--		</style>-->
+<!--	</head>-->
+<!--	<body>-->
+<!--	<header>-->
+<!--		<a style="text-decoration: none;" href="{{url_for('home')}}"><h1 style="text-align: left;">iPutra Visa Forum</h1></a>-->
+<!--	</header>-->
+<!--	</br>-->
+	{% include "header.html" %}
+<!--	<nav>-->
+<!--		<a href="{{url_for('home')}}"><button>HOME</button></a>-->
+<!--		<a href="{{url_for('register')}}"><button>REGISTER</button></a>-->
+<!--		<a href="{{url_for('login')}}"><button class="active">LOGIN</button></a>-->
+<!--	</nav>-->
+	</br></br></br></br>
+		<div align="center">
+		<div align="center" class="container">
+			<div class="header">
+				<h2 class="word">ENTER MATRIC NO AND PASSWORD</h2>
+			</div></br>
+			<h2 class="word">
+				<form style="width: 50%;" action="/log" method="POST">
+				<div class="msg"></div>
+					<input class="form-control form-control-lg" id="matric" name="matric" type="text" placeholder="Enter Your Matric number" required/></br>
+					<input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Enter Your Password" required/></br>
+					<input class="btn btn-primary" type="submit" class="btn" value="Login"></br>
+				</form>
+			</h2>
+		</div>
+
+		</div>
+	</br>
+
+<div>{% include 'chaticon.html' %}</div>
+</br></br>
+	<!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>IstudBot</h2>
+      </div>
+      <div class="modal-body" style="background-color: white; text-align: center;">
+        <div class="" style="background-color: white;">
+<div>
+      <div id="chatbox" style="width: 100%;">
+        <p class="botText"><span>Hi! I'm iStudBot.</span></p>
+      </div>
+      <div id="userInput" style="width: 100%;">
+        <input id="textInput" type="text" name="msg" placeholder="Message">
+        <input id="buttonInput" type="submit" value="Send">
+      </div>
+      <script>
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          });
+        }
+        $("#textInput").keypress(function(e) {
+            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+            if (document.getElementById("textInput").value != "") {
+                getBotResponse();
+            }
+        })
+      </script>
+    </div>
+
+    </div>
+
+  </div>
+	</div>
+  </div>
+
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+
+}
+
+</script>
+
+
+</html>

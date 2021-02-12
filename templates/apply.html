@@ -1,0 +1,156 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<!--<html>-->
+<!--	<head>-->
+<!--		<meta charset="UTF-8">-->
+<!--		<title> Register </title>-->
+<!--		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+<!--	</head>-->
+<!--	<style>-->
+<!--			body{-->
+<!--				/*background-image: url("{{ url_for('static', filename='bg.jpeg') }}");*/-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			header{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--			nav{-->
+<!--				text-align: center;-->
+<!--			}-->
+<!--			nav button{-->
+<!--				background-color: #ff2e2e;-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			nav button:hover{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			.active{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			input{-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			.container{-->
+<!--				background-color: rgb(255,255,255,0.5);-->
+<!--				padding: 10px;-->
+<!--				width: 60%;-->
+<!--			}-->
+<!--			footer{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--			/*input[type="file"]:before {-->
+<!--				content: attr(placeholder) !important;-->
+<!--				color: #aaa;-->
+<!--				margin-right: 0.5em;-->
+<!--			  }-->
+<!--			  input[type="file"]:focus:before,-->
+<!--			  input[type="file"]:valid:before {-->
+<!--				content: "";-->
+<!--			  }*/-->
+<!--			  label{-->
+<!--			  font-weight: bold;-->
+<!--			  }-->
+<!--			  table{-->
+<!--			  }-->
+<!--			  .contanier{-->
+
+<!--			  }-->
+<!--		</style>-->
+<!--	<body>-->
+<!--	<header>-->
+<!--		<a style="text-decoration: none;" href="{{url_for('home')}}"><h1 style="text-align: left;">iPutra Visa Forum</h1></a>-->
+<!--	</header>-->
+{% include "header.html" %}
+<style>
+	label{
+	font-size: 15px;
+	}
+	td{
+	padding: 5px;
+	}
+</style>
+	</br>
+<!--	<nav>-->
+<!--		<a href="{{url_for('home')}}"><button>HOME</button></a>-->
+<!--		<a href="{{url_for('applyp')}}"><button class="active">RENEWAL</button></a>-->
+<!--		<a href="{{url_for('newstud')}}"><button>NEW STUDENT</button></a>-->
+<!--        <a href="{{url_for('depend')}}"><button>DEPENDANT</button></a>-->
+<!--		<a href="{{url_for('login')}}"><button>LOGOUT</button></a>-->
+<!--	</nav>-->
+<!--	</br></br>-->
+		<div align="center">
+		<div align="center" class="container">
+			<div class="header">
+				<h1 class="word">Visa Renewal Application</h1>
+			</div>
+			<h2>Download:  <a class="btn btn-danger" href="{{ url_for('static', filename='STUDENT_PASS_RENEWAL.pdf')}}" target="_blank">Application Form</a></h2>
+			<h3>Fill up the application form and upload toghether with the other required documents</h3>
+</br>
+			<h2 class="word">
+				<form  action="/apply" method="POST" enctype = "multipart/form-data">
+				<div class="msg"></div>
+					<table style="width: 100%; ">
+					<tr>
+					<td><label>Matric no.</label></td>
+					<td><input id="matric" name="matric" type="text" placeholder="Enter Your Matric number" class="form-control" required/></td>
+						<td><label>Email</label></td>
+							<td><input id="email" name="email" type="text" placeholder="Enter Your Email" class="form-control" required/></td>
+					</tr>
+						<td><label>Phone no.</label></td>
+						<td><input id="phone" name="phone" type="text" placeholder="Enter Your Phone Number" class="form-control" required/></td>
+
+						<td><label>Passport no.</label></td>
+						<td><input id="passport" name="passport" type="text" placeholder="Enter Your Passport number" class="form-control" required/></td>
+					</tr>
+					<tr>
+						<td><label>Photograph Upload:</label></td>
+						<td><input id="photo" name="photo" type="file" placeholder="Upload your photograph" class="form-control" required/></td>
+
+						<td><label>Passport Upload:</label></td>
+						<td><input id="passp" name="passp" type="file" placeholder="Upload all Passport pages" class="form-control" required/></td>
+					</tr>
+
+					<tr>
+						<td><label>Current Registration Slip:</label></td>
+						<td><input id="offer" name="offer" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+
+						<td><label>Medical Insurance:</label></td>
+						<td><input id="med" name="med" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+					</tr>
+						<tr>
+						<td><label>Previous Academic Result:</label></td>
+						<td><input id="acacdresult" name="acadresult" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+
+						<td><label>Attendance Report:</label></td>
+						<td><input id="atreport" name="atreport" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+					</tr>
+                    <tr><td><label>Payment Receipt:</label></td>
+						<td><input id="payment" name="payment" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+					<td><label>Filled Application Form</label></td>
+						<td><input id="aform" name="aform" type="file" placeholder="Filled Application Form" class="form-control" required/></td>
+					</tr>
+					<!--<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>-->
+					<tr>
+						<td style="text-align: right" colspan="4"><input type="submit" class="btn btn-primary" value="SUBMIT"></td>
+					</tr>
+
+					</table>
+				</form>
+			</h2>
+		</div>
+		</div>
+	<br/>
+{% include 'chaticon.html' %}
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

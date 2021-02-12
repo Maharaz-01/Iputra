@@ -1,0 +1,62 @@
+{% include "header.html" %}
+
+		<div align="center">
+			<div class="header">
+				<h2 class="word">DEPENDENT APPLICATIONS</h2>
+			</div>
+<!--			<h2 class="word">-->
+
+<!--                <a href="{{url_for('viewrenewal')}}"><button>RENEWAL</button></a>-->
+<!--                <a href="{{url_for('newstud')}}"><button>NEW STUDENT</button></a>-->
+<!--                <a href="{{url_for('depend')}}"><button>DEPENDENT</button></a>-->
+<!--				<form action="/log" method="POST">-->
+<!--				<div class="msg"></div>-->
+<!--					<input id="matric" name="matric" type="text" placeholder="Enter Your Matric number" class="textbox"/></br></br>-->
+<!--					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>-->
+<!--					<input type="submit" class="btn" value="Login"></br>-->
+<!--				</form>-->
+<!--			</h2>-->
+			<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+        <th>Application ID</th>
+		<th>Matric</th>
+        <th>Email</th>
+		<th>Phone</th>
+		<th>Passport</th>
+		<th>Photo</th>
+		<th>Student's Passposrt</th>
+		<th>Proof of Relationship</th>
+		<th>Application Form</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+     {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+				<td>{{row[2]}}</td>
+				<td>{{row[3]}}</td>
+				<td>{{row[4]}}</td>
+				<td><a href="{{ url_for('static', filename=row[5]) }}" target="_blank">{{row[5]}}</a></td>
+				<td><a href="{{ url_for('static', filename=row[7]) }}" target="_blank">{{row[7]}}</a></td>
+				<td><a href="{{ url_for('static', filename=row[10]) }}" target="_blank">{{row[10]}}</a></td>
+				<td><a href="{{ url_for('static', filename=row[12]) }}" target="_blank">{{row[12]}}</a></td>
+                {% if(row[13] == 'Approved'): %}
+					<td>APPROVED</td>
+				{% elif(row[13] == 'Declined'): %}
+					<td>DECLINED</td>
+				{% else: %}
+				<td><a href="{{url_for('viewappdetail',id=row[0],type='depend')}}"><button class="btn btn-primary">VERIFY</button></a></td>
+				{% endif %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+		</div>
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

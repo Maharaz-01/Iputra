@@ -1,0 +1,22 @@
+{%include "header.html"%}
+
+		<div align="center" class="container">
+			<div class="header">
+
+				<h1 class="word">{{type}} Visa Application Remark</h1>
+			</div>
+
+			<form style="width: 70%;" action="/decline" method="post">
+               <input type="hidden" name="vid" value="{{data}}" />
+			   <input type="hidden" name="type" value="{{type}}">
+               <label>Reasons for decline: </label>
+			   <textarea class="form-control" name="remark" ></textarea><br>
+               <input class="btn btn-primary" type="submit" name="submit" value="SEND REMARK">
+           </form>
+</div>
+
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

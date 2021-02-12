@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> IstudBot UPM</title>
+      <link rel="stylesheet" type="text/css" href="/static/style.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="/static/boot/css/jquery.bxslider.css" rel="stylesheet" />
+    <style>
+
+			footer{
+                position: fixed;
+                   left: 0;
+                   bottom: 0;
+                   width: 100%;
+                   padding: 10px;
+                   background-color: #ababab;
+                   text-align: center;
+			}
+		</style>
+  </head>
+  <body>
+  <header>
+      <nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}">iPutra Hub</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('home')}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+
+      <li><a href="{{url_for('about')}}"><span class="glyphicon glyphicon-comment"></span> About Us</a></li>
+
+{% if session['loggedin'] %}
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{{url_for('dashboard')}}">
+        <span class="glyphicon glyphicon-list-alt"></span> Applications<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('newstud')}}">New Student</a></li>
+              <li><a href="{{url_for('applyp')}}">Visa Renewal</a></li>
+              <li><a href="{{url_for('depend')}}">Dependant Application</a></li>
+            </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{{url_for('dashboard')}}">
+        <span class="glyphicon glyphicon-info-sign"></span> Check Status<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('notif', type='new')}}">New Student</a></li>
+              <li><a href="{{url_for('notif', type='renewal')}}">Visa Renewal</a></li>
+              <li><a href="{{url_for('notif', type='depend')}}">Dependant Application</a></li>
+            </ul>
+      </li>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Hi {{user}} </a></li>
+  <li><a href="{{url_for('logout')}}"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+</ul>
+      {% elif session['ploggedin'] %}
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="{{url_for('dashboard')}}">
+        <span class="glyphicon glyphicon-list-alt"></span> Applications<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('viewnewstud')}}">View New Student</a></li>
+              <li><a href="{{url_for('viewrenewal')}}">View Visa Renewal</a></li>
+              <li><a href="{{url_for('viewdepend')}}">View Dependant Application</a></li>
+            </ul>
+      </li>
+</ul>
+    <ul class="nav navbar-nav navbar-right">
+
+        <li><a href="{{url_for('plogout')}}"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+</ul>
+      {% else %}
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{url_for('register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('login')}}">Student Login</a></li>
+              <li><a href="{{url_for('iputralog')}}">iPutra Login</a></li>
+            </ul>
+          </li>
+
+      </ul>
+      {% endif %}
+
+  </div>
+</nav>
+	</header>

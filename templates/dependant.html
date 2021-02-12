@@ -1,0 +1,81 @@
+{% include "header.html" %}
+<style>
+	label{
+	font-size: 15px;
+	}
+	td{
+	padding: 5px;
+	}
+</style>
+	</br>
+
+		<div align="center">
+		<div align="center" class="container">
+			<div class="header">
+				<h1 class="word">Dependant Visa Application</h1>
+			</div>
+			<h2>Download:  <a class="btn btn-danger" href="{{ url_for('static', filename='DEPENDENT_PASS_APPLICATION.pdf')}}" target="_blank">Application Form</a></h2>
+			<h3>Fill up the application form and upload toghether with the other required documents</h3>
+			</br>
+			<h2 class="word">
+				<form  action="/applydepend" method="POST" enctype = "multipart/form-data">
+				<div class="msg"></div>
+					<table style="width: 100%; ">
+					<tr>
+					<td><label>Matric no.</label></td>
+					<td><input id="matric" name="matric" type="text" placeholder="Enter Your Matric number" class="form-control" required/></td>
+						<td><label>Email</label></td>
+							<td><input id="email" name="email" type="text" placeholder="Enter Your Email" class="form-control" required/></td>
+					</tr>
+						<td><label>Phone no.</label></td>
+						<td><input id="phone" name="phone" type="text" placeholder="Enter Your Phone Number" class="form-control" required/></td>
+
+						<td><label>Dependant's Passport no.</label></td>
+						<td><input id="passport" name="passport" type="text" placeholder="Enter Your Passport number" class="form-control" required/></td>
+					</tr>
+					<tr>
+						<td><label>Dependant's Photograph:</label></td>
+						<td><input id="photo" name="photo" type="file" placeholder="Upload your photograph" class="form-control" required/></td>
+
+						<td><label>Student Passport:</label></td>
+						<td><input id="passp" name="passp" type="file" placeholder="Upload all Passport pages" class="form-control" required/></td>
+					</tr>
+
+					<tr>
+						<td><label>Dependant's Passport:</label></td>
+						<td><input id="passd" name="passd" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+
+						<td><label>Dependant's Medical Insurance:</label></td>
+						<td><input id="med" name="med" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+					</tr>
+                    <tr>
+						<td><label>Student's Bank Statement:</label></td>
+					<td><input id="val" name="val" type="file" placeholder="Upload Visa Approval Letter" class="form-control" required/></td>
+					<td><label>Payment Receipt:</label></td>
+						<td><input id="payment" name="payment" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+
+					</tr>
+					<!--<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>-->
+					<tr>
+						<td><label>Filled Application Form</label></td>
+						<td><input id="aform" name="aform" type="file" placeholder="Filled Application Form" class="form-control" required/></td>
+						<td><label>Proof of Relationship Document:</label></td>
+						<td><input id="offer" name="offer" type="file" placeholder="Upload Offer Letter" class="form-control" required/></td>
+					</tr>
+					<tr>
+						<td style="text-align: right" colspan="4"><input type="submit" class="btn btn-primary" value="SUBMIT"></td>
+					</tr>
+
+					</table>
+				</form>
+			</h2>
+		</div>
+		</div>
+	<br/>
+{% include "chaticon.html" %}
+
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

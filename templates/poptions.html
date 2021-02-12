@@ -1,0 +1,22 @@
+{% include "header.html" %}
+		<div align="center">
+		<div align="center" class="container">
+			<h1>iPutra Dashboard</h1>
+			<div style="text-align: center;"><img src="{{ url_for('static', filename='poptions.jpeg') }}" width="50%" /></div>
+			<div class="header">
+				<h2 class="word">SELECT TYPE OF APPLICATION</h2>
+			</div>
+			<h2 class="word">
+
+                <a href="{{url_for('viewrenewal')}}"><button class="btn btn-danger">RENEWALS</button></a>
+                <a href="{{url_for('viewnewstud')}}"><button class="btn btn-danger">NEW STUDENTS</button></a>
+                <a href="{{url_for('viewdepend')}}"><button class="btn btn-danger">DEPENDENTS</button></a>
+			</h2>
+		</div>
+		</div>
+	</br></br></br>
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

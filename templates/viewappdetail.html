@@ -1,0 +1,123 @@
+{% include "header.html" %}
+        {% if(type == "depend"): %}
+		<div align="center" class="container">
+			<div class="header">
+				{% for row in data %}
+				<h2 class="word">Dependant Visa Application</h2>
+			</div>
+
+<!--            <h3 style="text-align: right">Application Type: {{row[1]}}</h3>-->
+
+<h1>Matric: {{row[1]}}</h1>
+            <div style="text-align: left; font-weight: bold; font-size: 25px;">
+                Email: {{row[2]}} <br>
+                Phone no: {{row[3]}} <br>
+                Passport: {{row[4]}} <br>
+                Filled Application Form: <br>
+                <a href="{{ url_for('static', filename=row[12]) }}" target="_blank">Click to View Application</a><br>
+                Photo: <br>
+				<a href="{{ url_for('static', filename=row[5]) }}" target="_blank">
+					<img src="{{ url_for('static', filename=row[5]) }}" width="10%"/></a><br>
+                Dependant Passport Pages: <br>
+                <a href="{{ url_for('static', filename=row[6]) }}" target="_blank">Click to View Passport</a><br>
+                Student Passport Pages: <br>
+                <a href="{{ url_for('static', filename=row[7]) }}" target="_blank">Click to View Student Passport</a><br>
+                Medical Insurance: <br>
+                <a href="{{ url_for('static', filename=row[8]) }}" target="_blank">Click to View Medical Insurance</a><br>
+                Student Bank Statement: <br>
+                <a href="{{ url_for('static', filename=row[9]) }}" target="_blank">Click to View Bank Statement</a><br>
+                Proof of Relationship Document: <br>
+                <a href="{{ url_for('static', filename=row[10]) }}" target="_blank">Click to View Document</a><br>
+                Payment Receipt: <br>
+                <a href="{{ url_for('static', filename=row[11]) }}" target="_blank">Click to View Receipt</a>
+
+            </div>
+
+			<a href="{{url_for('approve',id=row[0],type='depend')}}"><button class="btn btn-success">APPROVE</button></a>
+			<a href="{{url_for('remarkdecline',id=row[0],type='depend')}}"><button class="btn btn-danger">DECLINE</button></a>
+
+{% endfor %}
+            {% elif(type=="new"): %}
+            <div align="center" class="container">
+			<div class="header">
+				{% for row in data %}
+				<h2 class="word">New Student Visa Application</h2>
+			</div>
+
+<!--            <h3 style="text-align: right">Application Type: {{row[1]}}</h3>-->
+
+<h1>Matric: {{row[1]}}</h1>
+            <div style="text-align: left; font-weight: bold; font-size: 25px;">
+                Email: {{row[2]}} <br>
+                Phone no: {{row[3]}} <br>
+                Passport: {{row[4]}} <br>
+                Filled Application Form: <br>
+                <a href="{{ url_for('static', filename=row[11]) }}" target="_blank">Click to View Application</a><br>
+                Photo: <br>
+				<a href="{{ url_for('static', filename=row[5]) }}" target="_blank">
+					<img src="{{ url_for('static', filename=row[5]) }}" width="10%"/></a><br>
+                Student Passport Pages: <br>
+                <a href="{{ url_for('static', filename=row[6]) }}" target="_blank">Click to View Passport</a><br>
+                Latest Registration Slip: <br>
+                <a href="{{ url_for('static', filename=row[7]) }}" target="_blank">Click to View Slip</a><br>
+                Medical Report: <br>
+                <a href="{{ url_for('static', filename=row[8]) }}" target="_blank">Click to View Medical Report</a><br>
+                Visa Approval Letter: <br>
+                <a href="{{ url_for('static', filename=row[9]) }}" target="_blank">Click to VAL</a><br>
+<!--                Proof of Relationship Document: <br>-->
+<!--                <a href="{{ url_for('static', filename=row[10]) }}" target="_blank">Click to View Document</a><br>-->
+                Payment Receipt: <br>
+                <a href="{{ url_for('static', filename=row[10]) }}" target="_blank">Click to View Receipt</a>
+
+            </div>
+
+			<a href="{{url_for('approve',id=row[0],type='new')}}"><button class="btn btn-success">APPROVE</button></a>
+			<a href="{{url_for('remarkdecline',id=row[0],type='new')}}"><button class="btn btn-danger">DECLINE</button></a>
+
+{% endfor %}
+            {% else: %}
+            <div align="center" class="container">
+			<div class="header">
+				{% for row in data %}
+				<h2 class="word">Renewal Visa Application</h2>
+			</div>
+
+<!--            <h3 style="text-align: right">Application Type: {{row[1]}}</h3>-->
+
+<h1>Matric: {{row[1]}}</h1>
+            <div style="text-align: left; font-weight: bold; font-size: 25px;">
+                Email: {{row[2]}} <br>
+                Phone no: {{row[3]}} <br>
+                Passport: {{row[4]}} <br>
+                Filled Application Form: <br>
+                <a href="{{ url_for('static', filename=row[12]) }}" target="_blank">Click to View Application</a><br>
+                Photo: <br>
+				<a href="{{ url_for('static', filename=row[5]) }}" target="_blank">
+					<img src="{{ url_for('static', filename=row[5]) }}" width="10%"/></a><br>
+                Passport Pages: <br>
+                <a href="{{ url_for('static', filename=row[6]) }}" target="_blank">Click to View Passport</a><br>
+                Current Registration Slip: <br>
+                <a href="{{ url_for('static', filename=row[7]) }}" target="_blank">Click to View Student Passport</a><br>
+                Medical Insurance: <br>
+                <a href="{{ url_for('static', filename=row[8]) }}" target="_blank">Click to View Medical Insurance</a><br>
+                Previous Academic Result: <br>
+                <a href="{{ url_for('static', filename=row[9]) }}" target="_blank">Click to View Result</a><br>
+                Atendance Report: <br>
+                <a href="{{ url_for('static', filename=row[10]) }}" target="_blank">Click to View Report</a><br>
+                Payment Receipt: <br>
+                <a href="{{ url_for('static', filename=row[11]) }}" target="_blank">Click to View Receipt</a>
+
+            </div>
+
+			<a href="{{url_for('approve',id=row[0],type='renewal')}}"><button class="btn btn-success">APPROVE</button></a>
+			<a href="{{url_for('remarkdecline',id=row[0],type='renewal')}}"><button class="btn btn-danger">DECLINE</button></a>
+
+{% endfor %}
+            {% endif %}
+</div>
+<br><br><br>
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>

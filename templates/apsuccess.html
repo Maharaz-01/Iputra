@@ -1,0 +1,82 @@
+
+<!--<html>-->
+<!--	<head>-->
+<!--		<meta charset="UTF-8">-->
+<!--		<title> Login </title>-->
+<!--		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+<!--		<style>-->
+<!--			body{-->
+<!--				/*background-image: url("{{ url_for('static', filename='bg.jpeg') }}");*/-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			header{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--			nav{-->
+<!--				text-align: center;-->
+<!--			}-->
+<!--			nav button{-->
+<!--				background-color: #ff2e2e;-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			nav button:hover{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			.active{-->
+<!--				background-color: #ffb92e;-->
+<!--			}-->
+<!--			input{-->
+<!--				padding: 10px;-->
+<!--			}-->
+<!--			.container{-->
+<!--				background-color: rgb(255,255,255,0.5);-->
+<!--				padding: 10px;-->
+<!--				width: 60%;-->
+<!--			}-->
+<!--			footer{-->
+<!--				background-color: #ff2e2e;-->
+<!--				margin-top: -10px;-->
+<!--				padding: 20px;-->
+<!--				margin-left: -10px;-->
+<!--				margin-right: -10px;-->
+<!--			}-->
+<!--		</style>-->
+<!--	</head>-->
+<!--	<body>-->
+<!--	<header>-->
+<!--		<a style="text-decoration: none;" href="{{url_for('home')}}"><h1 style="text-align: left;">iPutra Visa Forum</h1></a>-->
+<!--	</header>-->
+	</br>
+{% include "header.html" %}
+	<nav>
+<!--		<a href="{{url_for('home')}}"><button>LOGOUT</button></a>-->
+<!--		<a href="{{url_for('register')}}"><button>REGISTER</button></a>-->
+<!--		<a href="{{url_for('login')}}"><button class="active">LOGIN</button></a>-->
+	</nav>
+	</br></br></br></br>
+		<div align="center">
+		<div align="center" class="container">
+			<div class="header">
+				<h2 class="word">YOUR APPLICATION HAS BEEN SUBMITTED.</h2>
+			</div></br>
+			<h2 class="word">
+                Kindly await confirmation response from iPutra Staff
+<!--				<form action="/log" method="POST">-->
+<!--				<div class="msg"></div>-->
+<!--					<input id="matric" name="matric" type="text" placeholder="Enter Your Matric number" class="textbox"/></br></br>-->
+<!--					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>-->
+<!--					<input type="submit" class="btn" value="Login"></br>-->
+<!--				</form>-->
+			</h2>
+		</div>
+		</div>
+	{% include "chaticon.html" %}
+	<footer>
+		<b>Copyright &copy; 2021 MAHARAZ MUJTABA KARAYE</b>
+	</footer>
+	</body>
+</html>
