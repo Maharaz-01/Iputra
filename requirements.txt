@@ -18,7 +18,6 @@ mathparse~=0.1.2
 pip~=20.1.1
 zlib~=1.2.11
 wheel~=0.34.2
-openssl~=1.1.1g
 cryptography~=2.9.2
 py~=1.9.0
 lxml~=4.5.2
