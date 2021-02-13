@@ -509,6 +509,5 @@ def applydepend():
 
         return "<script>alert('APPLICATION SUBMITTED!');</script>" + render_template("apsuccess.html", user=vid)
 
-
 if __name__ == "__main__":
     app.run(debug=True)
