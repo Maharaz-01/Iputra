@@ -5,9 +5,11 @@ import os
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+
 app = Flask(__name__)
 app.config['UPLOAD_PATH'] = 'static'
 app.secret_key = 'maharazu'
+
 
 english_bot = ChatBot("iStudBot", logic_adapters=[
     {
