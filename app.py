@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config['UPLOAD_PATH'] = 'static'
 app.secret_key = 'maharazu'
 
+#web: gunicorn --bind 0.0.0.0:$PORT app:app web: python manage.py runserver 0.0.0.0:5000
 
 english_bot = ChatBot("iStudBot", logic_adapters=[
     {
